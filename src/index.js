@@ -1,4 +1,4 @@
-import React, { Component, createContext } from 'react';
+import React from 'react';
 
 function isObject(obj) {
   return typeof obj === 'object'
@@ -29,12 +29,12 @@ const Validator = {
 };
 
 export default function createContextComponents(initialState, handlers) {
-  const Context = createContext();
+  const Context = React.createContext();
 
   Validator.validateState(initialState);
   Validator.validateHandlers(handlers);
 
-  class Provider extends Component {
+  class Provider extends React.Component {
     constructor(props) {
       super(props);
       this.state = initialState;

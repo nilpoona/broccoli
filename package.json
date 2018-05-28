@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "main": "dest/index.js",
   "files": "dest",
-  "repository": "git@github.com:nilpoona/broccoli.git",
+  "repository": "git@github.com:nilpoona/padokia.git",
   "license": "MIT",
   "scripts": {
     "build": "./node_modules/.bin/rollup -c"

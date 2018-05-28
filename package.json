@@ -1,7 +1,8 @@
 {
-  "name": "broccoli",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "padokia",
+  "version": "0.1.0",
+  "main": "dest/index.js",
+  "files": "dest",
   "repository": "git@github.com:nilpoona/broccoli.git",
   "license": "MIT",
   "scripts": {

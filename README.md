@@ -12,7 +12,9 @@ npm install --save padokia
 ## Usage
 
 ``` javascript
+import React from 'react';
 import createContextComponents from 'padokia';
+
 const initialState = {counter: 0};
 const handlers = {
   increase: {
@@ -25,6 +27,16 @@ const handlers = {
 };
 
 const components = createContextComponents(initialState, handlers);
+const { Provider } = components;
+
+class App extends React.Component {
+  render() {
+    return (
+      <Provider>
+      </Provider>
+    );
+  }
+}
 ```
 
 

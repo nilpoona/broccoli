@@ -27,16 +27,38 @@ const handlers = {
 };
 
 const components = createContextComponents(initialState, handlers);
-const { Provider } = components;
+const { Provider, withConsumer } = components;
 
 class App extends React.Component {
   render() {
     return (
       <Provider>
+        <div>
+          { this.state.counter }
+        </div>
+        <Counter />
       </Provider>
     );
   }
 }
+
+const Counter = withConsumer(() => {
+  return (
+    <IncreaseBtn />
+  );
+});
+
+const IncreaseBtn = withConsumer((props) => {
+  const handleOnClick = () => {
+    props.handlers.increase();
+  };
+  
+  return (
+    <button onClick={handleOnClick}>
+      +
+    </button>
+  );
+});
 ```
 
 

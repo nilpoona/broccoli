@@ -15,12 +15,12 @@ npm install --save padokia
 import React from 'react';
 import createContextComponents from 'padokia';
 
-const initialState = {counter: 0};
+const initialState = {count: 0};
 const handlers = {
   increase: {
     func: function() {
       return {
-        counter: this.counter + 1
+        count: this.state.count + 1
       };
     }
   },
@@ -39,15 +39,21 @@ class App extends React.Component {
   }
 }
 
-const Counter = withConsumer((props) => {
+const Counter = () => {
   return (
     <div>
-      <div>
-        { props.state.counter }
-      </div
+      <Count />
       <IncreaseBtn />
     </div>
   );
+};
+
+const Count = withConsumer((props) => {
+  return (
+    <h1>
+      {props.state.count}
+    </h1>
+  )
 });
 
 const IncreaseBtn = withConsumer((props) => {

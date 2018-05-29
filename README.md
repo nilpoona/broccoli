@@ -33,18 +33,20 @@ class App extends React.Component {
   render() {
     return (
       <Provider>
-        <div>
-          { this.state.counter }
-        </div>
         <Counter />
       </Provider>
     );
   }
 }
 
-const Counter = withConsumer(() => {
+const Counter = withConsumer((props) => {
   return (
-    <IncreaseBtn />
+    <div>
+      <div>
+        { props.state.counter }
+      </div
+      <IncreaseBtn />
+    </div>
   );
 });
 

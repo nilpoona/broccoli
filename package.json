@@ -2,6 +2,10 @@
   "name": "padokia",
   "version": "1.0.0",
   "main": "dest/index.js",
+  "keywords": [
+    "React",
+    "Context API"
+  ],
   "files": "dest",
   "repository": "git@github.com:nilpoona/padokia.git",
   "license": "MIT",
